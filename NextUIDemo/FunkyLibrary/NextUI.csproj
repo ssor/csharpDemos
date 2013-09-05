@@ -1,0 +1,149 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E1310B7E-C063-4E6B-A6F0-87676EA0FB5A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FunkyLibrary</RootNamespace>
+    <AssemblyName>FunkyLibrary</AssemblyName>
+    <SignAssembly>false</SignAssembly>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bar\ControlKnob.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Bar\ControlKnob.Designer.cs">
+      <DependentUpon>ControlKnob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bar\Dragger.cs" />
+    <Compile Include="Bar\KnobPanel.cs" />
+    <Compile Include="Bar\SelectControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Bar\SelectControl.Designer.cs">
+      <DependentUpon>SelectControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bar\SignalLight.cs" />
+    <Compile Include="Bar\SquareLight.cs" />
+    <Compile Include="Bar\Switchbutton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Bar\Switchbutton.Designer.cs">
+      <DependentUpon>Switchbutton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Border\Border.cs" />
+    <Compile Include="Border\Border3D.cs" />
+    <Compile Include="Border\BorderShadow.cs" />
+    <Compile Include="Border\Inner3D.cs" />
+    <Compile Include="Collection\BaseStack.cs" />
+    <Compile Include="Collection\CounterCollection.cs" />
+    <Compile Include="Collection\DigitalPanelCollection.cs" />
+    <Compile Include="Collection\MeterLabelCollection.cs" />
+    <Compile Include="Common\GRectangle.cs" />
+    <Compile Include="Common\GRectangleF.cs" />
+    <Compile Include="Common\RoundedRectangle.cs" />
+    <Compile Include="Common\RoundedRectangleF.cs" />
+    <Compile Include="Common\RoundedTriangle.cs" />
+    <Compile Include="Common\ShapePath.cs" />
+    <Compile Include="Display\AnalogCounter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Display\AnalogCounter.Designer.cs">
+      <DependentUpon>AnalogCounter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Display\DigitalDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Display\DigitalDisplay.Designer.cs">
+      <DependentUpon>DigitalDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Display\DigitalPanel.cs" />
+    <Compile Include="Display\MeterPanel.cs" />
+    <Compile Include="Display\PointerMeter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Display\PointerMeter.Designer.cs">
+      <DependentUpon>PointerMeter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Display\RollingCounter.cs" />
+    <Compile Include="Display\ThermoDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Display\ThermoDisplay.Designer.cs">
+      <DependentUpon>ThermoDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Display\ThermoPanel.cs" />
+    <Compile Include="Helper\AlgorithmHelper.cs" />
+    <Compile Include="Helper\RectangleHelper.cs" />
+    <Compile Include="Helper\TextEffectHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Display\AnalogCounter.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AnalogCounter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Display\ThermoDisplay.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ThermoDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Image\AnalogCounter.bmp" />
+    <EmbeddedResource Include="Resource1.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="SGSserverUDP">
+</Property><Property Name="解决方案文件" Value="C:\Users\ssor\Downloads\UDP Chat\SGSserverUDP\SGSserverUDP.sln">
+</Property><Property Name="Date" Value="2011年12月16日">
+</Property><Property Name="Time" Value="18:09">
+</Property></Properties><Event ErrorLevel="0" Project="SGSserverUDP" Source="Server\SGSserverUDP.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="SGSserverUDP" Source="Server\SGSserverUDP.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="SGSserverUDP.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="SGSserverUDP.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="SGSserverUDP" Source="Server\SGSserverUDP.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>

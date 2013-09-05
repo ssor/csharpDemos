@@ -1,0 +1,163 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D156E28A-CFDF-4D83-A5E7-28F2D88CD255}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UZipDotNet</RootNamespace>
+    <AssemblyName>UZipDotNet</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adler32.cs" />
+    <Compile Include="ArchiveUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArchiveUpdateForm.Designer.cs">
+      <DependentUpon>ArchiveUpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BitReverse.cs" />
+    <Compile Include="ExceptionReport.cs" />
+    <Compile Include="CRC32.cs" />
+    <Compile Include="DeflateMethod.cs" />
+    <Compile Include="DeflateNoHeader.cs" />
+    <Compile Include="DeflateTree.cs" />
+    <Compile Include="DeflateZipFile.cs" />
+    <Compile Include="DeflateZLib.cs" />
+    <Compile Include="ProcessFilesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProcessFilesForm.Designer.cs">
+      <DependentUpon>ProcessFilesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtractSelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtractSelectionForm.Designer.cs">
+      <DependentUpon>ExtractSelectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InflateZipFile.cs" />
+    <Compile Include="InflateMethod.cs" />
+    <Compile Include="InflateNoHeader.cs" />
+    <Compile Include="InflateTree.cs" />
+    <Compile Include="InflateZLib.cs" />
+    <Compile Include="AddFilesAndFoldersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFilesAndFoldersForm.designer.cs">
+      <DependentUpon>AddFilesAndFoldersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramState.cs" />
+    <Compile Include="Trace.cs" />
+    <Compile Include="UZipDotNet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UZipDotNet.Designer.cs">
+      <DependentUpon>UZipDotNet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ArchiveUpdateForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ArchiveUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcessFilesForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ProcessFilesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtractSelectionForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ExtractSelectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFilesAndFoldersForm.resx">
+      <DependentUpon>AddFilesAndFoldersForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UZipDotNet.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UZipDotNet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ZipDirectory.cs" />
+    <Compile Include="TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DiskDriveBmp.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\DiskDriveSelBmp.bmp" />
+    <Content Include="Resources\File.bmp" />
+    <Content Include="Resources\Folder.bmp" />
+    <Content Include="Resources\FolderSel.bmp" />
+    <Content Include="Resources\MyComputerBmp.bmp" />
+    <Content Include="Resources\MyComputerSelBmp.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

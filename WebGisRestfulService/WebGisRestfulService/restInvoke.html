@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
+<html> 
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<script src="http://common.cnblogs.com/script/jquery.js" type="text/javascript"></script>  
+<script src="http://common.cnblogs.com/script/jquery.json-2.2.min.js" type="text/javascript"></script> 
+
+<script type="text/javascript" language="javascript">
+function requestRest_get(){
+			 $.ajax({
+			   type: "get",
+			   url: "http://localhost/SvcFiles/GetPointsRestful.svc/GetPos",
+			   success: function(data, textStatus){
+										ajaxGetRequestComplete(data);
+						},
+			   complete: function(XMLHttpRequest, textStatus){
+					//HideLoading();
+						},
+			   error: function(){
+					//
+					  }
+					});
+			}
+function requestRest_post(){
+			 $.ajax({
+			   type: "post",
+			   url: "http://localhost:4171/SvcFiles/AddPointsRestful.svc/AddPoint",
+			   //url: "http://localhost/SvcFiles/AddPointsRestful.svc/AddPoint",
+			   contentType: 'text/json',
+			   data: '{"StrLatitude":'+123+',"StrLongitude":"'+897+'","StrTime":"'+234+'"}',
+			   success: function(data, textStatus){
+										ajaxPostRequestComplete(data);
+						},
+			   complete: function(XMLHttpRequest, textStatus){
+					//HideLoading();
+						},
+			   error: function(){
+					//
+					  }
+					});
+			}
+function ajaxGetRequestComplete(data)
+	{
+		alert(data.StrLatitude.toString() + data.StrLongitude + data.StrTime);
+	}
+function ajaxPostRequestComplete(data)
+{
+	alert(data.toString());
+}
+</script> 
+</head>
+<body> 
+<input value="InvokeRESTGET" type="button" id="btnajax" onClick = "requestRest_get()"/> 
+<p/>
+<input value="InvokeRESTPOST" type="button" id="btnajax" onClick = "requestRest_post()"/> 
+</body> 
+</html> 

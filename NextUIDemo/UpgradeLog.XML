@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="NextUILibraryDemo">
+</Property><Property Name="解决方案文件" Value="C:\Users\ssor\Desktop\NextUIDemo\NextUILibraryDemo.sln">
+</Property><Property Name="Date" Value="2012年10月31日">
+</Property><Property Name="Time" Value="17:14">
+</Property></Properties><Event ErrorLevel="0" Project="NextUI" Source="FunkyLibrary\NextUI.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="NextUI" Source="FunkyLibrary\NextUI.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="AnalogControlSample" Source="AnalogControlSample\AnalogControlSample.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="AnalogControlSample" Source="AnalogControlSample\AnalogControlSample.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="SpeedometerDemo" Source="SpeedometerDemo\SpeedometerDemo.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="SpeedometerDemo" Source="SpeedometerDemo\SpeedometerDemo.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="DigitalDisplayDemo" Source="DigitalDisplayDemo\DigitalDisplayDemo.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="DigitalDisplayDemo" Source="DigitalDisplayDemo\DigitalDisplayDemo.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="MeterDemo" Source="MeterDemo\MeterDemo.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="MeterDemo" Source="MeterDemo\MeterDemo.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="KnobDemo" Source="KnobDemo\KnobDemo.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="KnobDemo" Source="KnobDemo\KnobDemo.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="DragScrollDemo" Source="DragScrollDemo\DragScrollDemo.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="DragScrollDemo" Source="DragScrollDemo\DragScrollDemo.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ToggleDemo" Source="ToggleDemo\ToggleDemo.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="ToggleDemo" Source="ToggleDemo\ToggleDemo.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="NextUILibraryDemo.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="NextUILibraryDemo.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="NextUI" Source="FunkyLibrary\NextUI.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event><Event ErrorLevel="0" Project="AnalogControlSample" Source="AnalogControlSample\AnalogControlSample.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event><Event ErrorLevel="0" Project="SpeedometerDemo" Source="SpeedometerDemo\SpeedometerDemo.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event><Event ErrorLevel="0" Project="DigitalDisplayDemo" Source="DigitalDisplayDemo\DigitalDisplayDemo.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event><Event ErrorLevel="0" Project="MeterDemo" Source="MeterDemo\MeterDemo.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event><Event ErrorLevel="0" Project="KnobDemo" Source="KnobDemo\KnobDemo.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event><Event ErrorLevel="0" Project="DragScrollDemo" Source="DragScrollDemo\DragScrollDemo.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event><Event ErrorLevel="0" Project="ToggleDemo" Source="ToggleDemo\ToggleDemo.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>

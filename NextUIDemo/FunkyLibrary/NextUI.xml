@@ -1,0 +1,653 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FunkyLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:NextUI.Collection.MeterLabel">
+            <summary>
+            The main class for a label 
+            </summary>
+        </member>
+        <member name="P:NextUI.Collection.MeterLabel.Value">
+            <summary>
+            Value is  the actual numeric value of the label
+            it is the actual value that will be raised when meter label
+            is used for control like knob,
+            It is also the actual value that is used to calculated the position
+            of the pointer .
+            </summary>
+        </member>
+        <member name="P:NextUI.Collection.MeterLabel.Desc">
+            <summary>
+            This property is used for the actual text display for a label
+            you can set Desc to "Hallo", but Value to 10 ,
+            So this label will be displayed as Hello but the numerical 10
+            will be the actual representation of the label
+            </summary>
+        </member>
+        <member name="P:NextUI.Collection.MeterLabel.Image">
+            <summary>
+            Used to show an Image for the label, 
+            Note : Not all the control supported this
+            </summary>
+        </member>
+        <member name="P:NextUI.Collection.MeterLabel.MainColor">
+            <summary>
+            This is used to determined the color of the shade between label
+            </summary>
+        </member>
+        <member name="T:NextUI.Bar.OnRotate">
+            <summary>
+            Rotate will be raised whenever a mouse is rotating the knob
+            </summary>
+            <param name="sender"></param>
+            <param name="value"> the value of the knob that will be generated 
+            is depends on the property "value" of the particular MeterLabel"</param>
+        </member>
+        <member name="T:NextUI.Bar.ControlKnob">
+            <summary>
+            
+            This Control provides a rotating knob 
+            </summary>
+        </member>
+        <member name="F:NextUI.Bar.ControlKnob.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NextUI.Bar.ControlKnob.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NextUI.Bar.ControlKnob.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="E:NextUI.Bar.ControlKnob.Rotate">
+            <summary>
+            To receive rotate event whenever a mouse is use to move the knob
+            </summary>
+        </member>
+        <member name="P:NextUI.Bar.ControlKnob.BackGrdColor">
+            <summary>
+            Set the background color of the control, the color is used to 
+            paint the back ground as a linear gradient brush
+            to fill a solid color , consider using a image
+            </summary>
+        </member>
+        <member name="P:NextUI.Bar.ControlKnob.DisplayFont">
+            <summary>
+            The font that is used to display the label
+            </summary>
+        </member>
+        <member name="P:NextUI.Bar.ControlKnob.FontColor">
+            <summary>
+            Use this to set the color of the font ,
+            the font is used to display the label
+            </summary>
+        </member>
+        <member name="P:NextUI.Bar.ControlKnob.MarkingImageType">
+            <summary>
+            The type of label to display , if Image , the control
+            will use the "Image" property of the MeterLabel class to display
+            the label, if set to Font , the control will used the "Desc" property
+            to display the label, if both, font and Image will be displayed
+            </summary>
+        </member>
+        <member name="P:NextUI.Bar.ControlKnob.Marking">
+            <summary>
+            This property is used to set the marking.
+            Line will display a line as a marking using the color of the font
+            Cont will provide a color shade between 2 marking using the 
+            "color" property of MeterLabel
+            Both will display Line as well as the shade
+            None will not display anything
+            </summary>
+        </member>
+        <member name="P:NextUI.Bar.ControlKnob.KnobHandleImage">
+            <summary>
+            To set the image of the center handle
+            </summary>
+        </member>
+        <member name="P:NextUI.Bar.ControlKnob.BackImage">
+            <summary>
+            Use this to set the background , for example , you can set 
+            the background to  solid color by setting this image to 
+            solod color image
+            </summary>
+        </member>
+        <member name="P:NextUI.Bar.ControlKnob.Labels">
+            <summary>
+            It returns a collection that allow user to add a meterlabel.
+            
+            </summary>
+        </member>
+        <member name="T:NextUI.Display.AnalogCounter">
+            <summary>
+            A control that simulate an analog counter
+            the analog counter can count forward and backward
+            </summary>
+        </member>
+        <member name="F:NextUI.Display.AnalogCounter.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NextUI.Display.AnalogCounter.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NextUI.Display.AnalogCounter.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.AnalogCounter.ScrollEffect">
+            <summary>
+            Set this to true will provides a scrolling effect when counter
+            change from 1 number to another. Not recommended if the counter 
+            has rapid changing value
+            Set this to false will provides a faster performance
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.AnalogCounter.CounterNumber">
+            <summary>
+            This will determined the number of panel that will be displayed
+            If set to 3 , there will be 3 panel, which mean the counter
+            will support 0 to 999 , anyrhing beyong 999 will be set back to 0.
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.AnalogCounter.Number">
+            <summary>
+            This determined the value that will be displayed
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.AnalogCounter.DisplayFont">
+            <summary>
+            The font to be displayed on each sub panel .
+            the size of the font will be ignored and is calculated based on 
+            the size of the sub panel
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.AnalogCounter.Panels">
+            <summary>
+            Return tha sub panel object , you can use this to set up the color
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.AnalogCounter.MainColor">
+            <summary>
+            Set the background color of the control, the color is used to 
+            paint the back ground as a linear gradient brush
+            to fill a solid color , consider using a image
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.AnalogCounter.alignment">
+            <summary>
+            Determined the location of the counter
+            you can set this to left , center or right
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.AnalogCounter.FrontImage">
+            <summary>
+            This is used to set up a analog counter .
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.AnalogCounter.MinumumDistanceFromH">
+            <summary>
+            this determined the edge from the side , 
+            </summary>
+        </member>
+        <member name="T:NextUI.Display.PointerMeter">
+            <summary>
+            Provide a speedometer like control
+            </summary>
+        </member>
+        <member name="F:NextUI.Display.PointerMeter.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NextUI.Display.PointerMeter.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NextUI.Display.PointerMeter.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.PointerMeter.InnerBorderRing">
+            <summary>
+            Set to true will show a inner circle border , by default it is true
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.PointerMeter.LabelFontColor">
+            <summary>
+            Use this to set the color of the font ,
+            the font is used to display the label
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.PointerMeter.PointerColor">
+            <summary>
+            The color of the pointer , by default it is red
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.PointerMeter.PointerHandleColor">
+            <summary>
+            the color of the pointer base.
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.PointerMeter.StartGapAngle">
+            <summary>
+            Provides the starting angle of gap , measure from the positive x axis.
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.PointerMeter.GapWidth">
+            <summary>
+            determined how wide the gap is in angle.
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.PointerMeter.DisplayFont">
+            <summary>
+            The font that is used to display the label
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.PointerMeter.BackGrdColor">
+            <summary>
+            Use this to set the background , for example , you can set 
+            the background to  solid color by setting this image to 
+            solod color image
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.PointerMeter.BackGroundImage">
+            <summary>
+            Use this to set the background , for example , you can set 
+            the background to  solid color by setting this image to 
+            solod color image
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.PointerMeter.Number">
+            <summary>
+            The Value to be shown in the control , the minimum and maximum depends on the 
+            "Value" property of Meterlabel. 
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.PointerMeter.Labels">
+            <summary>
+            It returns a collection that allow user to add a meterlabel.
+            "Image" property for this control is currently not supported .
+            
+            </summary>
+        </member>
+        <member name="T:NextUI.Bar.SelectControl">
+            <summary>
+            A control similiar to standard slide control except with more 
+            customize feature
+            </summary>
+        </member>
+        <member name="F:NextUI.Bar.SelectControl.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NextUI.Bar.SelectControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NextUI.Bar.SelectControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="E:NextUI.Bar.SelectControl.Slide">
+            <summary>
+            Slide event will be generated whenever a slide is moved 
+            </summary>
+        </member>
+        <member name="P:NextUI.Bar.SelectControl.Flipsize">
+            <summary>
+            Control the direction of the label .
+            UP will display the label on top
+            DOWN will display the label on the bottom
+            </summary>
+        </member>
+        <member name="P:NextUI.Bar.SelectControl.MarkingType">
+            <summary>
+            This property is used to set the marking.
+            Line will display a line as a marking using the color of the font
+            Cont will provide a color shade between 2 marking using the 
+            "color" property of MeterLabel
+            Both will display Line as well as the shade
+            None will not display anything
+            </summary>
+        </member>
+        <member name="P:NextUI.Bar.SelectControl.DisplayFont">
+            <summary>
+            The font that is used to display the label
+            </summary>
+        </member>
+        <member name="P:NextUI.Bar.SelectControl.FontColor">
+            <summary>
+            Use this to set the color of the font ,
+            the font is used to display the label
+            </summary>
+        </member>
+        <member name="P:NextUI.Bar.SelectControl.PointerHoverColor">
+            <summary>
+            the color of the pointer body whenever a mouse over
+            </summary>
+        </member>
+        <member name="P:NextUI.Bar.SelectControl.PointerBodyColor">
+            <summary>
+            The color of the pointer body
+            </summary>
+        </member>
+        <member name="P:NextUI.Bar.SelectControl.PointerColor">
+            <summary>
+            get or set the color of the pointer
+            </summary>
+        </member>
+        <member name="P:NextUI.Bar.SelectControl.BackGrdColor">
+            <summary>
+            Set the background color of the control, the color is used to 
+            paint the back ground as a linear gradient brush
+            to fill a solid color , consider using a image
+            </summary>
+        </member>
+        <member name="P:NextUI.Bar.SelectControl.BackImage">
+            <summary>
+            Use this to set the background , for example , you can set 
+            the background to  solid color by setting this image to 
+            solod color image
+            </summary>
+        </member>
+        <member name="P:NextUI.Bar.SelectControl.Labels">
+            <summary>
+             It returns a collection that allow user to add a meterlabel.
+            </summary>
+        </member>
+        <member name="T:NextUI.Display.ThermoDisplay">
+            <summary>
+            a control that simulate a thermometer
+            </summary>
+            <example>
+            public statuc vodddd
+            </example>
+        </member>
+        <member name="F:NextUI.Display.ThermoDisplay.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NextUI.Display.ThermoDisplay.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NextUI.Display.ThermoDisplay.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.ThermoDisplay.LabelFontColor">
+            <summary>
+            The color of the Font label
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.ThermoDisplay.Number">
+            <summary>
+            The Value to be shown in the control , the minimum and maximum depends on the 
+            "Value" property of Meterlabel. 
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.ThermoDisplay.BackGrdColor">
+            <summary>
+            Use this to set the background , for example , you can set 
+            the background to  solid color by setting this image to 
+            solod color image
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.ThermoDisplay.Flip">
+            <summary>
+            The direction of the label , it can be left, which means the label
+            will display on the left hand side , or right ,
+            which mean label will be displayed on the right hand side.
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.ThermoDisplay.Marking">
+            <summary>
+            This property is used to set the marking.
+            Line will display a line as a marking using the color of the font
+            Cont will provide a color shade between 2 marking using the 
+            "color" property of MeterLabel
+            Both will display Line as well as the shade
+            None will not display anything
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.ThermoDisplay.Alignment">
+            <summary>
+            Set the alignment , it can be left ,right or center
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.ThermoDisplay.LabelFont">
+            <summary>
+            The font that will be used to display the label
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.ThermoDisplay.IndicatorColor">
+            <summary>
+            The color of the indicator
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.ThermoDisplay.BackGroundImage">
+            <summary>
+            Use this to set the background , for example , you can set 
+            the background to  solid color by setting this image to 
+            solod color image
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.ThermoDisplay.Label">
+            <summary>
+            return the collection of MeterLabel
+            </summary>
+        </member>
+        <member name="T:NextUI.Display.DigitalDisplay">
+            <summary>
+            A class that simulate a digital panel.
+            You can use this class to descrement or increment.
+            </summary>
+        </member>
+        <member name="F:NextUI.Display.DigitalDisplay.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NextUI.Display.DigitalDisplay.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NextUI.Display.DigitalDisplay.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.DigitalDisplay.EnableGlare">
+            <summary>
+            Enable a kind of glowing effect for the digital display
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.DigitalDisplay.FontColor">
+            <summary>
+            Set the color of the display
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.DigitalDisplay.PanelColor">
+            <summary>
+            The color of each digital panel, where each panel hold 1 numerical 
+            value 
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.DigitalDisplay.BackGrdColor">
+            <summary>
+            Set the background color of the control, the color is used to 
+            paint the back ground as a linear gradient brush
+            to fill a solid color , consider using a image
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.DigitalDisplay.Alignment">
+            <summary>
+            Set the alignment , it can be left , right or center
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.DigitalDisplay.BackGroundImage">
+            <summary>
+            Use this to set the background , for example , you can set 
+            the background to  solid color by setting this image to 
+            solod color image
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.DigitalDisplay.Number">
+            <summary>
+            The Value to be displayed . It can be floating point or negative number
+            as well . if the number exceeded the value that can be supported by 
+            the control, a ------ will be displayed
+            </summary>
+        </member>
+        <member name="P:NextUI.Display.DigitalDisplay.PanelNumber">
+            <summary>
+            The number of panel that can be displayed . the more the panel ,the larger
+            value will be supported 
+            </summary>
+        </member>
+        <member name="T:NextUI.Bar.OnSwitchOn">
+            <summary>
+            Delegate that handle event when the button is switch on
+            </summary>
+            <param name="sender"></param>
+        </member>
+        <member name="T:NextUI.Bar.OnSwitchOff">
+            <summary>
+            Delegate that handle event when the button is switch off
+            </summary>
+            <param name="sender"></param>
+        </member>
+        <member name="T:NextUI.Bar.Switchbutton">
+            <summary>
+            A toggle button that provide a blinking light
+            </summary>
+        </member>
+        <member name="F:NextUI.Bar.Switchbutton.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NextUI.Bar.Switchbutton.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NextUI.Bar.Switchbutton.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="E:NextUI.Bar.Switchbutton.SwitchOn">
+            <summary>
+            Event that raised when button is toggled on 
+            </summary>
+        </member>
+        <member name="E:NextUI.Bar.Switchbutton.SwitchOff">
+            <summary>
+            Event that raised when button is toggled off
+            </summary>
+        </member>
+        <member name="P:NextUI.Bar.Switchbutton.Blink">
+            <summary>
+            if set to true , when the button is toggled , the led will
+            start blinking
+            </summary>
+        </member>
+        <member name="P:NextUI.Bar.Switchbutton.BlinkRate">
+            <summary>
+            set the rate of blinking if Blink is set to true
+            </summary>
+        </member>
+        <member name="P:NextUI.Bar.Switchbutton.MainColor">
+            <summary>
+            Set the background color of the control, the color is used to 
+            paint the back ground as a path gradient brush
+            to fill a solid color , consider using a image
+            </summary>
+        </member>
+        <member name="P:NextUI.Bar.Switchbutton.NonLitColor">
+            <summary>
+            The color of the led when button is not toggled
+            </summary>
+        </member>
+        <member name="P:NextUI.Bar.Switchbutton.LitColor">
+            <summary>
+            The color of the leb when button is toggled
+            </summary>
+        </member>
+        <member name="P:NextUI.Bar.Switchbutton.HaloEffect">
+            <summary>
+            Enable a grow effect of the led when button is toggled
+            </summary>
+        </member>
+        <member name="P:NextUI.Bar.Switchbutton.OnImage">
+            <summary>
+            use this to set the Image of the button when button is toggled
+            </summary>
+        </member>
+        <member name="P:NextUI.Bar.Switchbutton.OffImage">
+            <summary>
+            use this to set the image of the button when button is toggled off
+            </summary>
+        </member>
+        <member name="T:NextUI.Bar.OnSlide">
+            <summary>
+            delegate for Slide event
+            </summary>
+            <param name="sender"></param>
+            <param name="val"> the value that will be generated 
+            is depends on the property "value" of the particular MeterLabel"</param>
+        </member>
+        <member name="T:NextUI.Resource1">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:NextUI.Resource1.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:NextUI.Resource1.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>
