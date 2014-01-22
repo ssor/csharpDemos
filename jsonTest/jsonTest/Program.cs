@@ -17,4 +17,16 @@ namespace jsonTest
             Application.Run(new Form1());
         }
     }
+
+    public class command
+    {
+        public string name;
+        public string para;
+        public command() { }
+        public command(string _name, string _para)
+        {
+            this.name = _name;
+            this.para = _para;
+        }
+    }
 }

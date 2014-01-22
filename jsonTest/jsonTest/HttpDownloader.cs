@@ -168,8 +168,10 @@ namespace httpHelper
                     {
                         UTF8Encoding enc = new UTF8Encoding();
                         byte[] bs = enc.GetBytes(this.postData);
-                        myHttpWebRequest.ContentType = "text/json";
+                        //myHttpWebRequest.ContentType = "text/json";
                         //myHttpWebRequest.ContentType = "text/xml";
+                        myHttpWebRequest.ContentType = "application/json;charset=utf-8";
+
                         myHttpWebRequest.ContentLength = bs.Length;
 
                         myRequestState.request = myHttpWebRequest;

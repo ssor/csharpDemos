@@ -55,5 +55,36 @@ namespace jsonTest
             helper.RequestCompleted += new deleGetRequestObject(helper_RequestCompleted_getAllOrders);
             helper.TryPostData(url, jsonString);
         }
+        int speaktest = 0;
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string url = "http://192.168.57.105:3003/newcmd";
+            command cmd = new command("tts", speaktest.ToString());
+            speaktest++;
+            string jsonString = string.Empty;
+            jsonString = fastJSON.JSON.Instance.ToJSON(cmd);
+            HttpWebConnect helper = new HttpWebConnect();
+            helper.RequestCompleted += (obj) =>
+            {
+                string str = (string)obj;
+                Debug.WriteLine(str);
+            };
+            helper.TryPostData(url, jsonString);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string url = "http://192.168.57.105:3003/getcmds";
+            command cmd = new command("cmd2", "");
+            string jsonString = string.Empty;
+            jsonString = fastJSON.JSON.Instance.ToJSON(cmd);
+            HttpWebConnect helper = new HttpWebConnect();
+            helper.RequestCompleted += (obj) =>
+            {
+                string str = (string)obj;
+                Debug.WriteLine(str);
+            };
+            helper.TryPostData(url, jsonString);
+        }
     }
 }
