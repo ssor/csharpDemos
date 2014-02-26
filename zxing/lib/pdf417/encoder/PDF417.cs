@@ -676,6 +676,7 @@ namespace ZXing.PDF417.Internal
          //1. step: High-level encoding
          int errorCorrectionCodeWords = PDF417ErrorCorrection.getErrorCorrectionCodewordCount(errorCorrectionLevel);
          String highLevel = PDF417HighLevelEncoder.encodeHighLevel(msg, compaction);
+         //String highLevel = PDF417HighLevelEncoder.encodeHighLevel(msg, Compaction.BYTE);// by zqz
          int sourceCodeWords = highLevel.Length;
 
          int[] dimension = determineDimensions(sourceCodeWords, errorCorrectionCodeWords);

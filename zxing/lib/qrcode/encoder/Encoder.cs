@@ -40,7 +40,8 @@ namespace ZXing.QrCode.Internal
          25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, -1, -1, -1, -1, -1,  // 0x50-0x5f
       };
 
-      internal static String DEFAULT_BYTE_MODE_ENCODING = "ISO-8859-1";
+      internal static String DEFAULT_BYTE_MODE_ENCODING = "UTF-8";
+      //internal static String DEFAULT_BYTE_MODE_ENCODING = "ISO-8859-1";//by zqz 2014-2-19
 
       // The mask penalty calculation is complicated.  See Table 21 of JISX0510:2004 (p.45) for details.
       // Basically it applies four rules and summate all penalties.

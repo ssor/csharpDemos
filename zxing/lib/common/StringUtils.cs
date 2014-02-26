@@ -51,6 +51,7 @@ namespace ZXing.Common
       /// default encoding if none of these can possibly be correct</returns>
       public static String guessEncoding(byte[] bytes, IDictionary<DecodeHintType, object> hints)
       {
+          //return UTF8;
          if (hints != null && hints.ContainsKey(DecodeHintType.CHARACTER_SET))
          {
             String characterSet = (String)hints[DecodeHintType.CHARACTER_SET];

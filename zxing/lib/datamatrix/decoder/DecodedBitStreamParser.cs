@@ -644,7 +644,8 @@ namespace ZXing.Datamatrix.Internal
             result.Append(Encoding.GetEncoding("ISO-8859-1").GetString(bytes, 0, bytes.Length));
 #endif
 #else
-            result.Append(Encoding.GetEncoding("ISO-8859-1").GetString(bytes));
+             //result.Append(Encoding.GetEncoding("ISO-8859-1").GetString(bytes));
+             result.Append(Encoding.GetEncoding("UTF-8").GetString(bytes));// by zqz 
 #endif
          }
          catch (Exception uee)
